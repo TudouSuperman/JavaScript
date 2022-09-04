@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //要求:将数组[2,0,6, 1, 77, 0, 52, 0, 25, 7]中的0去掉后,形成一个不包含0的新数组。
+        //  var arr = [2,0,6, 1, 77, 0, 52, 0, 25, 7];
+        //  var newArr = [];
+        //  for (var i = 0; i < arr.length; i++) {
+        //      if (arr[i]!=0) {
+        //          newArr[newArr.length] = arr[i];
+        //      }
+            
+        //  } console.log(newArr);
+//计算各项元素分别重复出现的次数
+        var arr =[12,32,89,12,12,78,12,32];
+        var newArr =[];
+        var newArr1 =[];
+        var arr1 =[];
+        var arr2 =[];
+        for (var i = 0; i <arr.length; i++) {
+            if (arr[i]==12) {
+                newArr[newArr.length] = arr[i];
+            }
+            if (arr[i]==32) {
+                newArr1[newArr1.length] = arr[i];
+            }
+            if (arr[i]==89) {
+                arr1[arr1.length] = arr[i];
+            }
+            if (arr[i]==78) {
+                arr2[arr2.length] = arr[i];
+            }
+        }
+console.log('12,32,89,78在数组里分别重复出现'+ newArr.length +','+ newArr1.length +','+ arr1.length +','+ arr2.length +'次');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

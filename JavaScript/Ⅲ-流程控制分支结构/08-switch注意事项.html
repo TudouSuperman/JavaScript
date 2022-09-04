@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //switch注意事项
+     /*  var num =2 ;
+       switch(num){
+           case 1:
+               console.log('这是1');
+               break;
+           case 2:
+               console.log('这是2');
+               break;
+           case 3:
+               console.log('这是3');
+               break;
+           default:
+               console.log('无匹配数值');
+
+       }*/
+       //1.我们开发里面表达式我们经常写成变量
+
+       //2.我们num的值和case里面的值相匹配的时候是全等  必须是值和数据类型一致才可以 num===1
+
+       //3.如果当前case没有break，则不会退出switch，而是继续执行下面的case
+
+       //查询水果案例
+       //用户在弹出框里面输入一个水果,如果有就弹出该水果的价格，如果没有该水果就弹出“没有此水果”。
+       var fruit = prompt('请输入一个水果');//fruit是字符串
+  
+       switch(fruit){
+           case '葡萄':
+               alert('15元一斤');
+               break;
+           case '苹果':
+               alert(12+'元一斤');
+               break;
+           case '2'://此处不加引号无法执行，因为首行的水果是字符串，所以下面选项也都应该是字符串
+                       console.log('2');//此处加引号输出的是字符串类型的2（黑色的），此处不加引号，则直接把上面的‘2’改成了数字类型
+               break;
+           default:
+               alert('无此水果');
+       }
+    //    ①弹出prompt输入框,让用户输入水果名称,把这个值取过来保存到变量中。
+    //    ②将这个变量作为switch括号里面的表达式。
+    //    ③case 后面的值写几个不同的水果名称，注意-定要加引号,因为必须是全等匹配。
+    //    ④弹出不同价格即可。同样注意每个case之后加上break , 以便退出switch语句。
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

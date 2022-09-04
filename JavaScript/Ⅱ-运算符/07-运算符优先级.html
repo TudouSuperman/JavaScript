@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //练习1
+    console.log(4>=6 ||'人'!='阿凡达' && !(12*2==144) && false &&true);//// 后面说的都是逻辑短路运算 不作数： 先看||后面对的，返回!() 对的，返回false 错的，返回false
+     //再看||前后，前是错的，后也是错的，所以是错的  //但凡||前后有一个是对的，则，整体结果就是对的                                                                
+    var num = 10;
+     console.log(5==num/2 && 2+2*num ===22);     // Number(2+2*num)  === 22  （转圜为数字用Number）  和   (2+2*num) .toString() ==='22'  （.toString()转圜为字符串 ）都对                                                   
+      //练习2
+      var a = 3 > 5 && 2 < 7 && 3 == 4 ;//&&只要有一个错的，就返回fasle
+      console.log(a);       
+      var b = 3 <= 4 || 3 > 1 || 3 != 1 ;    
+      console.log(b);   
+      var c =2 === '2';
+      console.log(c);   
+      var d = !c || b && a ;   
+      console.log(d);                                                                  
+    </script>
+</head>
+<body>
+                                  
+</body>
+</html>

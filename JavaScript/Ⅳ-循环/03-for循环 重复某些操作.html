@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //求1-100之间所有整数的累加和
+      //先写一个求和的变量sum，这个sum是存储结果的变量，所以必须赋值0
+      //核心算法：1+2+3+4...   //sum(总和) = sum(总和现在是0) + i(现在是等赋值的123456...)  sum = sum + i
+      /*        var sum = 0;
+        for (var i = 1 ; i<=100; i++) {
+         // sum = sum + i;
+         sum += i;
+          }
+          console.log(sum);*/ //写在循环外面，防止每一次循环都会输出当前的和，写在外面可以输出总和
+
+      //  1.求1-100之间 所有数的平均值
+      /*        var sum = 0
+         for (var i = 1; i <= 100; i++) {
+             sum += i;
+             
+         }
+         console.log(sum/100);*/
+
+      //  2.求1-100之间所有偶数的和，奇数的和
+      /*       var sum = 0;
+         var sum2 = 0
+         for (var i = 1; i <= 100; i++) {
+            //  console.log(i);
+             if (i%2==0) {
+             sum = sum + i;
+         }else{
+             sum2 = sum2 +i ;
+         }
+         }
+         console.log('1~100之间所有偶数的和是'+ sum );
+         console.log('1~100之间所有奇数的和是'+ sum2);*/
+
+      //  3.求1-100之间所有能被3整除的数字的和
+      /*         var sum = 0;
+         for (var i = 1; i <= 100; i++) {
+           // console.log(i);
+            if (i%3==0) {
+                sum = sum + i;
+            }
+             
+         }
+         console.log(sum);*/
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+//while循环语法结构  while 当...的时候
+/*        while (条件表达式) {
+            //循环体
+        }*/
+        //2.执行思路 当条件表达式结果为true 则执行循环体 否则退出循环
+        //3.代码验证
+/*        var num = 1;
+        while (num <= 100) {
+            console.log('你好');
+            num++;
+        }*/
+        //4.里面应该也有计数器  初始化变量
+        //5.里面应该也有操作表达式，完成计数器的更新，防止死循环
+
+//案例
+        //1.打印人的一生，从1岁到100岁
+/*        var age = 1;
+        while (age <= 100) {
+            console.log('这个人今年' + age + '岁了');
+            age++;
+        }*/
+
+        //2.计算1~100之间所有整数的和
+/*        var sum = 0;
+        var num =1 ;
+        while (num <= 100) {
+            sum += num;
+            num++;
+        }
+        console.log(sum);*/
+
+        //3.弹出一个提示框， 你爱我吗? 如果输入我爱你，就提示结束，否则，一直询问。
+       
+    var love = prompt('你爱我吗');
+        while (love.toString()!='我爱你') {
+            //love = prompt('你爱我吗?');
+            var love = prompt('你爱我吗?');
+           }
+          alert('我也爱你啊！');
+        
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

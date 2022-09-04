@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //js语言提供了两种分支结构语句
+       // if语句
+    //switch语句
+
+    //1. if的语法结构
+   /* if (条件表达式) {
+        执行语句
+    }*/
+    //2. 执行思路    如果if里面的条件表达式结果为真 true，那么就执行花括号里面的执行语句；如果条件表达式为假，则不执行大括号里面的语句，则直接执行if{}后面的代码
+    //3. 代码体验
+    //例题1
+   /* if (3>5) {
+        alert('沙子')
+    }
+    if (3>1) {
+        alert('沙漠');
+    }
+    
+    if (3<5) {
+        alert('沙漠骆驼');
+    }
+    */
+   // 例题2
+    /*
+    var age= prompt('请输入您的年龄');
+    if (age>=18) {
+        alert('欢迎进入网吧');
+    }*/
+  //1.语法结构  if和else最终只有一个会执行里面的语句，else后面直接跟大括号
+             /* if (条件语句) {
+                        //执行语句1
+                    }else{
+                        //执行语句2
+                    }*/
+  var str = prompt('请输入您的出生年份');
+  var str1 =2021-str;
+  alert('您今年已经' + str1 + '岁了');
+
+        if (str1>=18) {
+            alert('您已满18周岁，欢迎您来此');
+        }
+        else{
+            alert('对不起，您的年龄未满18周岁不被允许来此');
+        }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

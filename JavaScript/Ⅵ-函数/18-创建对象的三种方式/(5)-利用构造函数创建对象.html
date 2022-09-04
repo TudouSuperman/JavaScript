@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //         构造函数: 是一种特殊的函数 ,主要用来初始化对象,即为对象成员变量赋初始值,它总与new运算符一起
+      // 使用。我们可以把对象中一些公共的属性和方法抽取出来 ,然后封装到这个函数里面。
+      //我们需要创建四大天王的对象及其属性和方法   相同的属性:名字 年龄 性别  相同的方法: 唱歌
+      //构造函数的语法格式
+      //   function 构造函数名() {
+      //     this.属性 = 值;
+      //     this.方法 = function () {};
+      //   }
+      //   new 构造函数名();
+      //   function Star(name, age, sex) {
+      //     this.uname = name;
+      //     this.age = age;
+      //     this.sex = sex;
+      //     // console.log(this.sex);
+      //     this.sing = function () {
+      //       console.log("冰雨");
+      //     };
+      //   }
+      //   var ldh = new Star("刘德华", 18, "男"); //调用函数返回的是一个对象
+      //   ldh.sing();
+      //   console.log(typeof ldh); //typeof 检测数据类型
+      //   console.log(ldh.age);
+      //   var zxy = new Star("张学友", 20, "男");
+      //   console.log(zxy.uname);
+      // 1.构造函数名字首字母要大写
+      // 2.我们构造函数不需要return 就可以返回结果
+      // 3.我们调用构造函数必须使用new
+      //4.我们只要new Star() 调用函数 就创建了一个对象ldh {}
+      // 5.我们的属性和方法前面必须添加this
+
+      // 利用构造函数创建两个英雄对象。函数中的公共部分包括:姓名属性(name) ,类型属性(type) , 血量属
+      // 性( blood )和攻击方式( attack)。
+      // ●廉颇 力量型 500血量 攻击:近战
+      // ●后羿 射手型 100血量 攻击: 远程
+      //   function Yx (uname,type,blood) {
+      //       this.name = uname;
+      //       this.type = type;
+      //       this.blood = blood;
+      //       this.attack = function () {
+      //           console.log('攻击：近战');
+      //       }
+      //       this.attack2 = function () {
+      //           console.log('攻击：远程');
+      //       }
+      //   }
+      //   var lp = new Yx('廉颇','力量型','500血量');
+      //   console.log(lp.name + ',' + lp.type + ',' + lp.blood);
+      //   lp.attack();
+      //   var hy = new Yx('后羿','射手型','100血量');
+      //   console.log(hy.name + ',' + hy.type + ',' + hy.blood);
+      //   hy.attack2();
+    </script>
+  </head>
+  <body></body>
+</html>

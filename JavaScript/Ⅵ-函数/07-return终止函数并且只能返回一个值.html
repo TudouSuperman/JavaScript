@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //函数返回值 注意事项
+      //1.return终止函数，return语句之后的代码不被执行
+      //     function getSum(num1,num2) {
+      //         return num1 + num2;//return 后面的代码不会被执行
+      //         alert('我是不会被执行的哦');
+      //     }
+      //     console.log(getSum(1,4));
+
+      //    //2. return只能返回一个值。
+      //    function fn(num1,num2) {
+      //        return num1,num2; //如果用逗号隔开多个值,以最后一个为准。
+      //    }
+      //    console.log(fn(9,7));
+
+      //3.想让return输出多个值，就得把多个值变成数组，再用return输出数组
+
+      //(1)求任意俩个数的 加减乘除结果
+      //    function getSum(num1,num2) {
+      //        var sum =num1 + num2;
+      //        var cr = num1 - num2;
+      //        var ce = num1 * num2;
+      //        var cu = num1 / num2;
+      //        var arr = [sum,cr,ce,cu];
+      //        return arr ;
+      //    }
+
+      //    console.log(getSum(6,2));
+
+
+      //(2)
+      function getSum(num1, num2) {
+        // return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+      }
+      var re = getSum(6, 2);
+      console.log(re);
+
+      //4.我们的函数如果有return则返回的是return 后面的值，如果函数没有return 则返回undefined
+      function fun1() {
+        return 666;
+      }console.log(fun1()); //返回666
+
+      function fun2() {
+        
+      }console.log(fun2()); //返回undefined
+    </script>
+  </head>
+  <body></body>
+</html>

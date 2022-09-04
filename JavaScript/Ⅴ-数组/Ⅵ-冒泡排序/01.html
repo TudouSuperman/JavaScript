@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //复习交换变量
+        // var num1 = 'pink';
+        // var num2 = 'yellow';
+        // var temp;
+        // temp = num1;
+        // num1 = num2;
+        // num2 = temp;
+        // console.log(num1,num2);
+        //冒泡排序:是一种算法,把-系列的数据按照-定的顺序进行排列显示（从小到大或从大到小）。
+        var arr =[6,5,4,3,2,1];
+        for (var i = 0; i <arr.length-1; i++) {
+            for (var j = 0; j <arr.length-i-1; j++) {
+               if (arr[j]>arr[j+1]) {
+                   var temp = arr[j];
+                   arr[j] = arr[j+1];
+                   arr[j+1] = temp;
+               }
+                
+            }
+            
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

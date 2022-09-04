@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// 1.求1-100之间所有整数的总和与平均值
+// 2.求1-100之间所有偶数的和
+// 3.求100以内7的倍数的总和
+// 4.使用for循环打印矩形,要求每次只能输出一个⭐
+// ⭐⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+// 5.使用for循环打印三角形;
+// ⭐
+// ⭐⭐
+// ⭐⭐⭐
+// ⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+// 6.使用for循环打印99乘法表
+// 7.接收用户输入的用户名和密码,若用户名为"admin" , 密码为“123456” ,则提示用户登录成功!
+// 否则，让用户一直输入。
+// 8.求整数1 ~ 100的累加值，但要求跳过所有个位为3的数[用continue实现]。
+
+
+//1.求1-100之间所有整数的总和与平均值
+// var sum = 0;
+
+// for (var i = 1; i <= 100; i++) {
+//     sum += i;
+    
+// }
+// var average = sum / 100;
+// console.log('1-100之间所有整数的总和是' + sum);
+// console.log('1-100之间所有整数的平均值是' + average);
+
+// 2.求1-100之间所有偶数的和
+// var num =1 ;
+// var sum = 0;
+// do {
+//     if (num%2 == 0) {
+//         sum +=num; 
+//     }
+    
+//     num++;
+// } while (num <= 100);
+// console.log('1-100之间所有偶数的和是' + sum);
+
+//3.求100以内7的倍数的总和
+//  var sum = 0;
+// for (var i = 1; i <= 100 ; i++) {
+//     if (i%7 != 0) {
+        
+//         continue;
+//     }  
+//      sum += i;
+//    }
+// console.log('100以内7的倍数的总和是' + sum);
+
+// 4.使用for循环打印矩形,要求每次只能输出一个⭐
+// ⭐⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+
+// var str = '';
+// for (var i = 1; i <= 4; i++) {
+//     for (var j = 1; j <= 5; j++) {
+//         str =str +'⭐';
+        
+//     }
+//          str=str+'\n';
+//   }
+//          console.log(str);
+
+// 5.使用for循环打印三角形;
+// ⭐
+// ⭐⭐
+// ⭐⭐⭐
+// ⭐⭐⭐⭐
+// ⭐⭐⭐⭐⭐
+
+// var str = '' ;
+// for (var i = 1; i <=5; i++) {
+//     for (var j = 1; j <= i; j++) {
+//         str = str + '⭐';
+        
+//     }
+//     str += '\n';
+// }
+// console.log(str);
+
+//6.使用for循环打印99乘法表
+// var num = '';
+// for (var i = 1; i <= 9; i++) {
+//     for (var j = 1; j <= i; j++) {
+//        num += j + '×' + i + '=' + j * i +'\t';
+        
+//     }
+//     num += '\n';
+// }
+// console.log(num);
+
+//7.接收用户输入的用户名和密码,若用户名为"admin" , 密码为“123456” ,则提示用户登录成功!
+// 否则，让用户一直输入。
+
+// var i = 1;
+// do {
+//     var name =prompt('请输入用户名');
+//     var code =prompt('请输入密码');
+// i++;
+// } while (name != 'admin'&&code != '123456');
+
+// alert('登陆成功');
+
+
+//   8.求整数1 ~ 100的累加值，但要求跳过所有个位为3的数[用continue实现]。
+// var sum = 0;
+// var j = 3;
+
+// for (var i = 1; i <= 100; i++) {
+
+//    if ( +j.toString()== i) {
+//       continue;
+      
+      
+//   }
+//   j++; 
+
+//       sum += i;
+// }  
+//   console.log(sum);
+
+// var sum = 0;
+
+// for (var i = 1; i <= 100; i++) {
+// switch (i) {
+//     case 3:
+//     case 13:
+//     case 23:
+//     case 33:
+//     case 43:
+//     case 53:
+//     case 63:
+//     case 73:
+//     case 83:
+//     case 93:
+//         continue;
+// }
+// sum += i;
+// }
+// console.log(sum);
+
+// var sum = 0;
+// for (var i = 1; i <= 100; i++) {
+//     if(i==3||i==13||i==23||i==33||i==43||i==53||i==63||i==73||i==83||i==93)
+//     {
+//         continue;
+//     }
+//     sum += i;
+// }
+// console.log(sum);
+//   8.求整数1 ~ 100的累加值，但要求跳过所有个位为3的数[用continue实现]。
+
+//13,23,33,43....
+//先把一到十的数字用for列出来，然后赋值给j，分别用j加三
+var sum=0;
+var arr = [3,13,23,33,43,53,63,73,83,93]
+var j = arr;
+for (var i = 1; i<=100; i++) {
+    if (i=j) {
+        continue;
+    }
+    sum +=i;  
+} console.log(sum);
+// var i = 1;
+// var sum=0;
+// do {
+    
+//       sum +=i;  
+//     }
+//     i++;
+//  while (i <= 100);
+
+
+// console.log(sum); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

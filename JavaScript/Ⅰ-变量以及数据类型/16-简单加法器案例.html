@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    < charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"ss>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   // 先弹出第个输入框， 提示用户输入第一个值保存起来
+    // 再弹出第二个框，提示用户输入第二个值保存起来
+   // 把这两个值相加，并将结果赋给新的变量(注意数据类型转换)
+    // 弹出警示框(alert)把计算的结果输出(输出结果)
+    var num1=prompt('请输入一个数字');
+    var num2=prompt('请再输入一个数字');
+   // var str=parseInt(num1)+parseInt(num2);
+    var str=parseFloat(num1)+parseFloat(num2);//parseFloat比parseInt精确 ，前者精确到小数
+    alert('总和是'+str);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

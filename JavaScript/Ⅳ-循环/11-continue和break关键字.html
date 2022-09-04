@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // continue关键字用于立即跳出本次循环，继续下一次循环(本次循环体中continue之后的代码就会少执行-次)。
+
+        // 例如，吃5个包子,第3个有虫子,就扔掉第3个,继续吃第4个第5个包子,其代码实现如下:
+/*       for (var i = 1; i <= 5; i++) {
+           if (i == 3) {
+               continue;//只要遇见continue 就退出本次循环直接跳到i++
+
+              
+           }
+            console.log('我正在吃第' + i + '个包子');
+       }
+*/
+// break关键字用于立即跳出整个循环(循环结束)。
+// 例如,吃5个包子,吃到第3个发现里面有半个虫子,其余的不吃了,其代码实现如下:
+for (var i = 1; i <= 5; i++) {
+    if (i == 3) {
+        break; //只要遇见break 就退出整个循环，不再执行所有内容
+    }
+    console.log('这是第' + i + '个包子');
+}
+
+
+    //   1.求1~100之间，能被7整除的整数和  //如果说除了能被7整除之外的整数和
+/*    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 7 != 0) { //那么这里就要改成（i % 7 == 0），其他不变
+            continue;
+        }
+        sum += i;
+    }
+    console.log(sum);*/
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

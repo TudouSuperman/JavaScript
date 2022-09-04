@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //  把数字型转换为字符串型
+    var num=10;
+//1.利用   变量.toString()
+    var str=num.toString();//把数字型转换为字符串型
+    console.log(str);//蓝色是值类型：数值(字)类型和boolean（布尔类型）
+    console.log(typeof str);//黑色的10 ，输出的是num的值   (显示器显示黑色的是字符串)
+//2.  利用String(变量)
+    var str1=String(num);
+    console.log(str1);
+    console.log(String(num));//这括号填str1也行，填num也行
+    //3.  利用  +  拼接字符串的方法实现转换的效果  称为 “隐式转换”
+    console.log(str1+null);//单双引号皆可表示空字符串，这里不用null是因为不确定num是否是数字
+var temer=str1+null;
+console.log(typeof temer);//number   而且就算num是数字，加了空值null，得出的结果类型 还是数值类型，null不能让这个加法结果变成字符串
+alert(str1+null);//alert只会弹出警示框显示10，不能代替console.log来输出语句。
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

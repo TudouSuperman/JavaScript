@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //.Math对象随机数方法
+      //1 * Math random() 返回个随机的小数 浮点型伪随机数字： 0 =< x < 1 (开闭区间)  Math. random()不能提供像密码一样安全的随机数字
+      //2 * 这个方法里面不跟参数
+      //3 * 代码验证
+      //console.log(Math.random());
+      //0到100之间随机取10个数
+      //   for (var i = 1; i <= 10; i++) {
+      //     console.log(Math.floor(Math.random() * (100 - 0 + 1) + 0));
+      //   }
+
+      //    得到两数之间的一个随机数  //[min,max）之间的随机数
+      // 这个例子返回了一个在指定值之间的随机数。这个值不小于min (如果min不是整数的话,得到一个向上取整的min)
+      //  ,并且小于(但不等于) max
+      //4 * 代码验证：（return内是固定公式）
+      //  function getRandomNum(min,max) {
+      //      return Math.random()*(max-min)+min;
+      //  }console.log(getRandomNum(2,5));
+
+      //    得到两数之间的一个随机整数  //（min,max）之间的随机整数
+      //      这个例子返回了一个在指定值之间的随机整数。这个值比min大(如果min不是整数。那就大
+      // 于比min大的整数) , 但小于(但不等于) max
+      //5 * 代码验证： （return内是固定公式）
+      // function getRandomInt(min,max) {
+      //     min = Math.ceil(min);
+      //     max = Math.floor(max);
+      //     return Math.floor(Math.random() *(max-min))+min;
+      // } console.log(getRandomInt(2.2,4.2));
+      //也许很容易让人想用舍入来完成这个任务，但是这样做会导致你的随机数处于一个不均匀
+      //的分布，这可能不符合你的需求，所以用与最大数和最小数相反的，
+      //floor（地板最小整数值）和ceil（天花板最大整数值）来取值max = Math.floor(max); min = Math.ceil(min);
+
+      //    得到两数之间的一个随机整数，包括两个数在内o  //[min,max]之间的随机整数
+      // 当getRandomInt()函数在最小值之上，它将排除最大值.如果你需要结果包含最小值和最大
+      // 值，怎么办呢? getRandomIntInclusive() 函数将能完成
+      //6 * 代码验证：
+      // function getRandomIntInclusive(min,max) {
+      //     min = Math.ceil(min);
+      //     max = Math.floor(max);
+      //     return Math.floor(Math.random() * (max-min + 1) + min);
+      // }console.log(getRandomIntInclusive(4,6.5));
+      // console.log(getRandomIntInclusive(3.5,6.2));
+
+      //我们想要得到两个整数之间的随机整数 并且包含这2个整数  // [min,max]之间的随机整数
+      //7 * 代码验证：
+      // function getRandom(min,max) {
+      //     return Math.floor(Math.random() * (max-min + 1) + min);
+      // }console.log(getRandom(1,10));
+
+      //随机点名 案例
+      //先把名字集中到一个数组，然后去遍历数组
+     // var name = arr['石旗','石旗旗'];或者用下面的
+    //   var arr1 = ['石旗','石旗旗','石旗旗旗','石旗旗旗旗'];
+    //   function arr(min,max) {
+    //       return Math.floor(Math.random() * (max-min + 1) + min);
+    //   }
+      // // console.log(arr[0]);//只能输出第一个石旗
+      // //console.log(arr(arr1[0],arr1.length));//arr1[0]和arr1.length不是数字，是字符串，所以得到执行结果是NaN
+       //console.log(arr1[arr(0,3)]); //得到最后的结果，是正确的调用方法，3也可以写成arr1.length-1
+      // //console.log(arr(arr1[0,3])); //arr1[0,3]是里面的字符串，不是数字，所以代入方法里面得到的执行结果是NaN
+    </script>
+  </head>
+  <body></body>
+</html>

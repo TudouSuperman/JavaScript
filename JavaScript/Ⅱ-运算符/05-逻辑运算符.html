@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//1.    逻辑与&&（and）    两侧都为true，结果才是true，只要有一侧为false，结果就是false
+        console.log( 3>5 && 3>2 );//false
+        console.log( 3<5 && 3>2 );//true
+//2.    逻辑或||    两侧都为false，结果就是false，只要有一侧为true，结果就是true
+            console.log(3>5||3>2);//true
+            console.log(3>5||3<2);//false
+//3.    逻辑非(!)也叫取反符
+            var isok=!true;
+            console.log(isok);//false
+         
+         
+         //   逻辑运算符练习
+         var num=7;
+         var str='我爱你~中国~';
+         console.log(num>=5 && str.length>=num);//true
+         console.log(num<5 && str.length>=num);//false
+            console.log(!(num<=10));//false
+            console.log(!(!(num<=10||str.length==num)));//true
+//4.    逻辑与短路运算
+            // 语法:表达式1 &&表达式2
+            // 如果第一个表达式的值为真,则返回表达式2
+            // 如果第一个表达式的值为假,则返回表达式1
+            //(1)数字里面只有0是假的，其余数字都是真的
+            // (2)字符串里面只有''（空）是假的，其余的都是真的
+            //(3)null,undefined,NaN 也都是假的
+            //布尔值参与逻辑运算： true && false== false
+            console.log(0 && 423);//0 
+            console.log('' && 1+456 && 2*123);//''  返回的是空 什么都没有，而不是引号
+            console.log(123 && null);//null  123是真的，所以返回表达式2 null
+            console.log(undefined && 123);//undefined
+
+//5.逻辑或短路运算   如果表达式1结果为真 ，则返回的是表达式1  ； 如果表达式1结果为假 ，则返回表达式2。
+            //布尔值参与逻辑运算： true ||false == true
+            console.log(123||456);//123
+            console.log(0||123*2||123);
+            var num = 0;
+            console.log(123||num++);//123
+            console.log(num);//0
+
+//同一个表达式中，先算&&后算||
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

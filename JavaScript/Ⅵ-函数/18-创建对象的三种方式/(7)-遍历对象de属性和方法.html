@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   //遍历对象
+      //   var obj = {
+      //     name: " pink老师",
+      //     age: 18,
+      //     sex: "男",
+      //     fn: function () {},
+      //   };
+      // console. log(obj.name);
+      // console. log(obj.age);
+      // console.log(obj.sex);
+      // for in遍历我们的对象
+      //for(变量in对象){ //变量习惯写成k或者key
+      // }obj
+      //   for (var k in obj) {
+      //     console.log(k); //k 变量输出，得到的是属性名，冒号左边的
+      //     console.log(obj[k]); //obj[k]得到的是属性值，冒号右边的
+      //   }
+
+      // 1.对象可以让代码结构更清晰
+      // 2.对象复杂数据类型object.
+      // 3.本质:对象就是- - -组无序的相关属性和方法的集合。
+      // 4.构造函数泛指某一大类,比如苹果,不管是红色苹果还是绿色苹果,都统称为苹果。
+      // 5.对象实例特指一个事物,比如这个苹果、正在给你们讲课的pink老师等。
+      // 6. for..in语句用于对对象的属性进行循环操作。
+
+      // ****1.创建一个电脑对象,该对象要有颜色、重量、品牌、型号,可以看电影、听音乐、打游戏和敲代码。
+      // function Dn(ucolor,height,pinpai,type) {
+      //     this.color = ucolor;
+      //     this.height = height;
+      //     this.pinpai = pinpai;
+      //     this.type = type;
+      //     this.gn = function () {
+      //         console.log('可以看电影，听音乐，打游戏和敲代码');
+      //     }
+      // }var pbdn = new Dn('红色','5kg','戴尔','book')
+      // console.log('这个笔记本电脑是' + pbdn.color +'的,' + '重量是' + pbdn.height + ',' + '品牌是' + pbdn.pinpai + ',' + '型号是' + pbdn.type);
+      // pbdn.gn();
+      // ***2.创建一个按钮对象,对象中需要包含宽,高,背景颜色和点击行为。
+            var an = {
+              width: 1,
+              height: 2,
+              blackcolor:'red',
+              xingwei: function () {
+                console.log("响动");
+              },
+            };
+            for(var k in an){
+                // console.log(k);
+      console.log(an[k]);
+            }
+      // ***3.创建一个车的对象,该对象要有重量、颜色、牌子,可以载人、拉货和耕田。
+
+      // ①
+      // 写一个函数,实现反转任意数组。
+      // ②
+      // 写一个函数,实现对数字数组的排序。
+
+      //   做一个简易计算器
+      //   此网页显示
+      //   欢迎使用简易计算器:
+      //   1.加法运算:
+      //   2.减法运算:
+      //   3.乘法运算:
+      //   4.除证运算:
+      //   5.退出;
+      //   请输入您的选项:
+
+      //   var js = {
+      //     fn1: "欢迎使用简易计算器：",
+      //     jiaf: "1.加法运算:",
+      //     jianf: "2.减法运算:",
+      //     chef: "3.乘法运算:",
+      //     chuf: "4.除证运算:",
+      //     tuic: "5.退出;",
+      //     fnm2: "请输入您的选项：",
+      //   };
+
+      //   var jsq = prompt(
+      //     js.fn1 +
+      //       "\n" +
+      //       js.jiaf +
+      //       "\n" +
+      //       js.jianf +
+      //       "\n" +
+      //       js.chef +
+      //       "\n" +
+      //       js.chuf +
+      //       "\n" +
+      //       js.tuic +
+      //       "\n" +
+      //       js.fnm2
+      //   );
+      //   switch (jsq) {
+      //     case "1":
+      //       var b = prompt("请输入第一个数");
+      //       var c = prompt("请输入第二个数");
+      //       var result = Number(b) + Number(c);
+      //       alert(result);
+      //       break;
+      //     case "2":
+      //       var a = prompt("请输入第一个数");
+      //       var s = prompt("请输入第二个数");
+      //       var result2 = Number(a) - Number(s);
+      //       alert(result2);
+      //       break;
+      //     case "3":
+      //       var d = prompt("请输入第一个数");
+      //       var f = prompt("请输入第二个数");
+      //       var result3 = d * f;
+      //       alert(result3);
+      //       break;
+      //     case "4":
+      //       var g = prompt("请输入第一个数");
+      //       var h = prompt("请输入第二个数");
+      //       var result4 = g / h;
+      //       alert(result4);
+      //     case "5":
+      //       break;
+
+      //     default:
+      //       alert("无此选项");
+      //   }
+
+      // var b = Number(prompt("请输入第一个数"));
+      // var c = Number(prompt("请输入第二个数"));
+
+      // var jsq = prompt(
+      //   "欢迎使用简易计算器：" +
+      //     "\n" +
+      //     "1.加法运算:" +
+      //     "\n" +
+      //     "2.减法运算:" +
+      //     "\n" +
+      //     "3.乘法运算:" +
+      //     "\n" +
+      //     "4.除证运算:" +
+      //     "\n" +
+      //     "5.退出;" +
+      //     "\n" +
+      //     "请输入您的选项："
+      // );
+      // switch (jsq) {
+      //   case "1":
+      //     alert(b + c);
+      //     break;
+      //   case "2":
+      //     alert(b - c);
+      //     break;
+      //   case "3":
+      //     alert(b * c);
+      //     break;
+      //   case "4":
+      //     alert(b / c);
+      //     break;
+      //   case "5":
+      //     break;
+      //   default:
+      //     alert("无此选项");
+      // }
+    </script>
+  </head>
+  <body></body>
+</html>

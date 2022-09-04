@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //    要求用户输入班级人数,之后依次输入每个学生的成绩,最后打印出该班级总的成绩以及平均成绩。
+
+      /*       var num =prompt('请输入班级人数');
+        var sum = 0;
+       // var average(平均成绩)=sum/num
+       for (var i = 1 ; i <= num ; i++) {
+            var num2= Number(prompt('请输入第' + i + '个学生的成绩'));
+            sum= sum + num2
+            
+        }
+       alert('此班级成绩总和是' + sum);
+         var average = sum/num ;
+       alert('此班级平均成绩是' + average );
+
+
+*/
+
+      // ①弹出输入框输入总的班级人数(num)
+      // ②依次输入学生的成绩(保存起来score ) , 此时我们需要用到for循环,弹出的次数跟班级
+      //  总人数有关系条件表达式i <= num
+      // ③进行业务处理:计算成绩。先成总成绩 ( sum) ,之后求平均成绩( average )
+
+      //一行打印五个星星
+
+      // 假设1.     console.log('⭐⭐⭐⭐⭐');
+
+      //假设2.  for (var i = 1; i <= 5; i++) {
+      //            console.log('⭐');
+
+      //        }
+
+      //利用字符串拼接
+      var str = ""; //给str赋值空的字符串
+      for (var i = 1; i <= 5; i++) {
+        str = str + "⭐"; //右边的str是字符串，加上星星会变成拼接效果
+      }
+      console.log(str);
+    </script>
+  </head>
+  <body></body>
+</html>

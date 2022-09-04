@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1.问
+      // console.log(num); //报错，因为没有num这个变量。
+
+      //2.问
+      //   console.log(num1); //结果执行undefined  坑1（先做了预解析，后做了代入执行）
+      //   var num1 = 10;
+      //   相当于执行了以下代码
+      //   var num1;
+      //   console.log(num1);
+      //   num1 = 10;
+      //2小问
+      //   var num2;
+      //   console.log(num2); //还是undefined //如果一个变量声明未赋值，就输出undefined表示未定义数据类型
+
+      //   //3.问
+      //   function f1() {
+      //     console.log(11); //结果执行11
+      //   }
+      //   f1();
+      //   //3小问
+      //   f2();
+      //   function f2() {
+      //     console.log(12); //结果执行12
+      //   }
+
+      //   //4.问
+      //   var fun = function () {  //赋值的就需要把调用函数放在函数之后，才能调用
+      //     console.log(20); //结果是20
+      //   };
+      //   fun();
+      //函数表达式  调用必须写在函数表达式的下面
+      //   //4小问
+      // fun();
+      //   var fun = function () {
+      //     console.log(20); //报错  坑2
+      //   };
+      //相当于执行了以下代码
+      //   var fun; //这个fun没有给值
+      //   fun();
+      //   fun = function () { //*******function这个整体赋值给了fun，所以花括号之后会加分号******
+      //     console.log(20);
+      //   };
+      //把fun（）；放在这里就能执行
+
+      // 1.
+      //我们js引擎运行js分为两步:
+      // 预解析
+      // 代码执行
+      // (1)预解析js引擎会把js里面所有的var 还有function提升到当前作用域的最前面
+      // (2). 代码执行 按照代码书写的顺序从上往下执行
+      // 2.
+      // 预解析分为变量预解析(变量提升)和函数预解析( 函数提升)
+      // (1)变量提升 就是把所有的变量声明 提升到当前的作用域最前面  不提升赋值操作
+      // (2)函数提升 就是把所有的函数声明 提升到当前作用域的最前面  不调用函数
+
+      //预解析案例1
+      // var num = 10;
+      // fn();
+      // function fn() {
+      //   console.log(num);
+      //   var num = 20;
+      // }
+      // //相当于执行了以下操作
+      // var num;
+      // function fn() {
+      //   var num;
+      //   console.log(num);   //undefined
+      //   num = 20;
+      // }
+      // num = 10;
+      // fn();
+      //案例2
+      // var num = 10;
+      // function fn() {
+      //   console.log(num);
+      //   var num = 20;
+      //   console.log(num);
+      // }
+      // fn();
+      //相当于执行了以下操作
+      // var num;
+      // function fn() {
+      //   var num;
+      //   console.log(num);   //undefined
+      //   num = 20;
+      //   console.log(num);   //20  因为num未赋值，所以是全局变量，可以执行
+      // }
+      // num = 10;
+      // fn();
+      //案例3
+      // var a = 12;
+      // fn();
+      // function fn() {
+      //   var b = 13;
+      //   console.log(a);
+      //   console.log(b);
+      //   var a = "123";
+      // }
+      //相当于执行了以下操作
+      // var a;
+      // function fn() {
+      //   var b;
+      //   var a;
+      //   b = 13;
+      //   console.log(a); //undefined
+      //   console.log(b); //13
+      //   a = "123";
+      // }
+      // a = 12;
+      // fn();
+      //案例4
+      // fn();
+      // console.log(c);
+      // console.log(b);
+      // console.log(a);
+      // function fn() {
+      //   var a = (b = c = 9);
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+      // }
+      //相当于执行了以下操作
+      // var a = (b = c = 9);相当于  var=9;b=9;c=9; b和c直接赋值没有var声明当全局变量看
+      //集体声明// var a=9,b=9，C=9;（中间加逗号）这个是var a = 9; var b = 9; var c = 9;的意思
+
+      // function fn() {
+      //   var a;
+      //   a = b = c = 9;
+      //   console.log(a); //9
+      //   console.log(b); //9
+      //   console.log(c); //9
+      // }
+      // console.log(c); //9 和b一样
+      // console.log(b); //9 b没有在局部作用域命名，所以是全局变量，在全局作用域可以用
+      // console.log(a); //报错，因为a是在 局部作用域 里命名了，所以a是局部变量，不能在全局作用域用a
+      // fn();
+    </script>
+  </head>
+  <body></body>
+</html>

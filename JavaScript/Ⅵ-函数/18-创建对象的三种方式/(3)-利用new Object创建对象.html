@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //利用new Object()创建对象
+    //   var obj = new Object(); //创建了一个空的对象
+    //   obj.name = "石旗";
+    //   obj.age = 99;
+    //   obj.color = "black";
+    //   obj.sq = function () {
+    //     console.log("石旗是大狗是");
+    //   };
+    //   obj.sq();
+
+    //   console.log(obj.name);
+      // (1) 我们是利用 等号= 赋值的方法添加对象的 属性和方法
+      // (2)每个属性和方法之间用 分号 结束
+
+      // 请用new Object形式创建一个鸣人对象。
+      // 具体信息如下:
+      // ●姓名:鸣人
+      // ●性别:男
+      // ●年龄: 19岁
+      // ●技能(skill) :影分身术
+      var mr = new Object();
+      mr.uname = '鸣人';
+      mr.sex = '男';
+      mr.age = '19';
+      mr.skill = function () {
+          console.log('他会影分身术');
+      }
+      console.log('此人名' + mr.uname+ ',' + '性别' + mr.sex + ',' + '年龄' + mr.age + '岁');
+      mr.skill();
+    </script>
+  </head>
+  <body></body>
+</html>

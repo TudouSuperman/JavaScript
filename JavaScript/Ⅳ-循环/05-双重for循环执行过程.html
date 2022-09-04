@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //         循环嵌套是指在一一个循环语句中再定义一个循环语句的语法结构,例如在for循环语句中,可以再嵌套-个
+      // for循环,这样的for循环语句我们称之为 双重for循环。
+
+      //双重for循环
+      //   1. 语法结构
+      //   for (外层的初始化变量;外层的条件表达式;外层的操作表达式){
+      //       for(里层的初始化变量;里层的条件表达式;里层的操作表达式){
+      //           执行语句;
+      //       }
+
+      // }
+      //   2.我们可以把里面的循环看做是外层循环的语句
+      //   3.外面循环循环一次，里面的循环执行全 部,等里面循环执行完再执行外面一次，接着会执行里面的for，外面的循环变量大多会影响里面的循环
+      //   4.代码验证
+      /*   for (var i = 1; i <= 3; i++) {
+            console.log('这是外层第' + i +'次循环');              这是外层第1次循环
+            for (var j = 1; j <= 3; j++) {                          这是里层第1次循环  
+                console.log('这是里层第' + j + '次循环');            这是里层第2次循环
+            }                                                       这是里层第3次循环
+                                                                这是外层第2次循环
+        }                                                           这是里层第1次循环
+                                                                    这是里层第2次循环
+                                                                    这是里层第3次循环
+                                                                这是外层第3次循环
+                                                                    这是里层第1次循环
+                                                                    这是里层第2次循环
+                                                                    这是里层第3次循环     */
+      //打印五行五列星星
+      var str = "";
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5; j++) {
+          str = str + "⭐";
+        }
+        //如果一行打印完毕5个星星就要另起一行加\n
+        str = str + "\n";
+      }
+
+      console.log(str);
+
+      //打印n行n列星星
+      //   var line = prompt('请输入您的行数');
+      //   var list = prompt('请输入您的列数');
+      //   var str = '';
+      //   for (var i = 1; i <=Number(list) ; i++) {
+      //       for (var j = 1; j <= Number(line); j++) {
+      //          str = str + '⭐';
+
+      //       }
+      //       str = str +'\n';
+      //   }
+      //   console.log(str);
+    </script>
+  </head>
+  <body></body>
+</html>

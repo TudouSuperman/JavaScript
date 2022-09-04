@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 求数组[2,6,1,7, 4]里面所有元索的和以及平均值。
+    //   var sum = 0;
+
+    //   var arr = [2, 6, 1, 7, 4];
+    //   for (var i = 0; i < arr.length; i++) {
+    //     sum += arr[i]; //我们加的是数组元素arr[i] 不是计数器i
+    //   }
+    //   console.log("元素的和是" + sum);
+    //   var average = sum / arr.length;
+    //   console.log("平均值是" + average);
+    //   console.log(sum + "," + average); //想要输出多个变量，用逗号分隔即可，此处逗号没加引号，两个数值之间就会有个空格
+      // (1)声明一个求和变量sum。
+      // (2)遍历这个数组，把里面每个数组元素加到sum里面
+      // (3)用求和变量sum除以数组的长度就可以得到数组的平均值。
+
+     // 求数组[2,6,1,77,52,25,7]中的最大值。
+//      声明一个保存最大元索的变量max。
+//  默认最大值可以取数组中的第一个元素。
+// 遍历这个数组,把里面每个数组元素和max相比较。
+// 如果这个数组元素大于max就把这个数组元素存到max里面,否则继续下一轮比较。
+var arr = [1,6,1,77,52,25,7];
+var max = arr[0];
+for (var i = 1; i<arr.length; i++) {//var i = 1 循环从1 ：‘6’开始
+    if (arr[i]>max) {
+        max = arr[i];
+    }
+    
+}
+console.log('该数组元素的最大值是' + max);
+
+    </script>
+  </head>
+  <body></body>
+</html>

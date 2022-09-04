@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //布尔型有两个值：false和true
+        var flag=true;//flag布尔型
+        var flag1=false;//flag布尔型
+        console.log(flag+1);// 2  true参与加法当一来算
+        console.log(flag1+1);//1  false参与加法当0来算
+        //如果一个变量声明未赋值，就输出undefined表示未定义数据类型
+        var str;
+        console.log(str);//undefined，未赋值就会输出undefined
+        var variable=undefined;
+        console.log(variable+"pink");//variablepink  1.未定义数据类型+字符串也会显示拼接功能“变量名加字符串”
+        console.log(variable+1);//NaN     undefined和数字相加最后的结果是NaN:不是一个数字
+        //null空值
+        var space=null;
+        console.log(space+"pink");//nullpink  2.空值+字符串也是拼接功能“空值null加字符串”
+        console.log(space+1);//1  空值+数字就是数字
+
+//1.  未赋值undefined的和空值null   与字符串相加都是  拼接功能
+//2.  未赋值undefined与数字加  都是NaN  不是数字。空值null加数字  就得出这个数字。
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

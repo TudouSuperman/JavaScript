@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      //  ①-般情况下,它们两个语句可以相互替换
+       // ②switch..case 语句通常处理case为比较确定值的情况,而if..else..语句更加灵活,常用于范围判断(大于、等于表示某个范围)
+      //3.  switch语句进行条件判断后直接执行到程序的条件语句,效率更高。而if.. .else语句有几种条件,就得判断多少次。
+     // ④当分支比较少时, if.. else语句的执行效率比switch语句高。(一条一条执行，直到找到最后结果)
+     // ⑤当分支比较多时, switch语句的执行效率比较高,而且结构更清晰。(直接执行最后需要的结果，就算上面一堆选择，他也会掠过)
+
+//作业 
+    // ①1. 判断时间阶段。比如 用户输入12点弹出 中午好 ；用户输入18点弹出 傍晚好 ；用户输入23点弹出 深夜好
+    // ②2. 比较两个数的最大值( 用户依次输入2个值,最后弹出最大的那个值)
+    // ③3.用户输入一个数,来判断是奇数还是偶数
+    // ④4.根据用户输入的数值(数字1到数字7 ) ,返回星期几
+    // ⑤5.接收班长口袋里的钱数，若大于等于2000 ,请大家吃西餐。若小于2000 ,大于等于1500 ,请大家吃快餐。
+       // 若小于1500,大于等于1000 ,请大家喝饮料。若小于1000 ,大于等于500 ,请大家吃棒棒糖。否则提醒班长下次把钱带够
+    // ⑥6.分数转换：给一个分数,判定等级。大于等于90 A , 大于等于80小于90 B , 大于等于70小于80 C , 大于 等于60小于70 D , 小于60 E
+    // ⑦7. 预习下循环控制for循环
+
+
+
+//    // ①1. 判断时间阶段。比如 用户输入12点弹出 中午好 ；用户输入18点弹出 傍晚好 ；用户输入23点弹出 深夜好
+//     var time = prompt('请输入一个时间')
+//     if (time<12 && time>=0) {
+//         alert('早上好');
+//     }else if(time>=12&&time<16){
+//         alert('中午好');
+//     }else if (time>=18&&time<23) {
+//         alert('傍晚好');
+//     }else if (time>=23 && time<=24) {
+//         alert('深夜好');
+//     }
+  
+
+//    //②2. 比较两个数的最大值( 用户依次输入2个值,最后弹出最大的那个值)
+//     var num1 =prompt('请输入一个数字');
+//     var num2 =prompt('请输入第二个数');
+//     if (num1>num2) {
+//         alert(num1+'大');
+//     }else if (num1<num2) {
+//         alert(num2+'大');
+//     }else{
+//         alert('数值一样大');;
+//     }
+
+
+//    //③3.用户输入一个数,来判断是奇数还是偶数
+//     var score =prompt ('请输入一个数');
+//     var result = score % 2 == 0 ? '偶数': '奇数' ;
+//     alert(result);
+
+
+   //④4.简易版  根据用户输入的数值(数字1到数字7 ) ,返回星期几
+//    var num = prompt ('请输入1~7里的一个数字');
+//    alert('星期'+num);
+   //④4.困难版
+//    var num =prompt('请输入1~7里的一个数字');
+//    switch (num) {
+//        case '1':
+//            console.log('今天是星期一');
+//            break;
+//        case '2':
+//            console.log('今天是星期二');
+//            break;
+//        case '3':
+//            console.log('今天是星期三');
+//            break;
+//        case '4':
+//            console.log('今天是星期四');//返回值框：今天是星期四
+//            break;
+//        case '5':
+//           alert('今天是星期五');
+//            break;
+//            case '6':
+//               alert('今天是星期六');//弹框：今天是星期六
+//                break;
+//                case '7':
+//                  alert('今天是星期日');
+//                    break;
+//        default:
+//            console.log('输入错误');
+        
+//    }
+
+
+   //⑤5.接收班长口袋里的钱数，若大于等于2000 ,请大家吃西餐。若小于2000 ,大于等于1500 ,请大家吃快餐。
+       // 若小于1500,大于等于1000 ,请大家喝饮料。若小于1000 ,大于等于500 ,请大家吃棒棒糖。否则提醒班长下次把钱带够
+//    var money = prompt ('请班长输入所带钱数');
+//    if (money>=2000) {
+//        alert('班长请大家吃西餐吧');
+//    }else if (money < 2000 && money >= 1500) {
+//        alert('请大家吃快餐');
+//    }else if (money < 1500 && money >= 1000) {
+//        alert('请大家喝饮料');
+//    }else if (money < 1000 && money >=500) {
+//        alert('请大家吃棒棒糖');
+//    }else{
+//        alert('班长下次把钱带够');
+//    }
+
+
+   //⑥6.大于等于90 A , 大于等于80小于90 B , 大于等于70小于80 C , 大于 等于60小于70 D , 小于60 E
+//    var score1 = prompt ('请输入你的分数');
+//    var A="A"
+//    if (score1>=90) {
+//        alert(A);
+//    }else if (score1 < 90 && score1 >= 80) {
+//        alert('B');
+//    }else if (score1 < 80 && score1 >= 70) {
+//        alert('C');
+//    }else if (score1 < 70 && score1 >=60) {
+//        alert('D');
+//    }else{
+//        alert('E');
+//    }
+var score1 =prompt('请输入您的分数');
+
+// var number=0;
+
+//    if (score1>=90) {
+//     number=1;
+//    }else if (score1 < 90 && score1 >= 80) {
+//     number=2;
+//    }else if (score1 < 80 && score1 >= 70) {
+//     number=3;
+//    }else if (score1 < 70 && score1 >=60) {
+//     number=4;
+//    }else{
+//     number=5;
+// }
+
+  
+// switch (number) {
+//     case 1 :
+//         console.log('A');
+//         break;
+//     case 2 :
+//         console.log('B');
+//         break;
+//     case 3:
+//         console.log('C');
+//         break;
+//     case 4:
+//         console.log('D');
+//         break;
+//     case 5:
+//         console.log('E');
+//         break;   
+ //}
+
+switch (Number(score1)) {
+    case 1 :
+    case 2 :
+    case 3 :
+    case 4 :
+    case 5 :
+    case 6 :
+    case 7 :
+    case 8 :
+    case 9 :
+    case 10 :
+        console.log('A');
+        break;
+    case 11 :
+    case 12 :
+    case 13 :
+    case 14 :
+    case 15 :
+    case 16 :
+    case 17 :
+    case 18 :
+    case 19 :
+    case 20 :
+    console.log('B');
+        break;
+}
+
+</script>
+
+</head>
+</html>

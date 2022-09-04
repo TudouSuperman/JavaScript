@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //函数的使用分为两步： 声明函数 和 调用函数
+      //1.声明函数
+      // function 函数名() {
+      //    // 函数体
+      // }
+
+      function sayHi() {
+        console.log("hi~");
+      }
+      //(1)function声明函数的关键字
+      //(2)函是做某件事情，函数名一般是动词 比如  sayHi
+      //(3)函数不调用，自己是不执行的
+      // 2. 调用函数
+      //函数名();
+      sayHi();
+      //调用函数的时候千万不要忘记加小括号；
+
+      //案例
+      //利用函数计算1-100之间的累加和
+      function getsum() {
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+          sum += i;
+        }
+        console.log(sum);
+      }
+      getsum();
+
+      //1.函数是做什么的？
+      // 函数 是可以重复执行（调用）的代码块
+      //2.声明函数用什么关键词?
+      // function
+      //3.如何调用函数
+      //函数名（）；
+      //4.封装是什么意思
+      //打包，把函数代码整合成为一个整体
+    </script>
+  </head>
+  <body></body>
+</html>

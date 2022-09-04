@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1. JavaScript作用域，:就是代码名字 (变量)在某个范围内起作用和效果目的是为了提高程序的可靠性更重
+      //要的是减少命名冲突
+      //2.Js的作用域（es6）之前 ： 全局作用域   局部作用域
+
+      //3.全局作用域 : 整个script标签，或者是一个单独的js文件
+
+      // var num = 10; //这个var 在 script 全局作用域 里面
+      // console.log(num);
+
+      //4.局部作用域 ：在函数内部就是局部作用域，这个代码的名字 只在函数内部起效果和作用（出了这个函数就不起效果了）
+
+      // function name() {
+      //     //局部作用域
+      //     var num = 20;//这个var 在局部作用域 里
+      //     console.log(num);
+      // }name();
+      //   3.从执行效率来看全局变量和局部变量
+      //   (1) 全局变量只有浏览器关闭的时候才会销毁，比较占内存资源
+      //   (2) 局部变量当我们程序执行完毕就会销毁， 比较节约内存资源
+
+      // js中没有块级作用域  js的作用域: 全局作用域  局部作用域
+      // 现阶段我们js没有块级作用域
+      // 我们js也是在 es6的时候新增的块级作用域
+ 
+    </script>
+  </head>
+  <body></body>
+</html>

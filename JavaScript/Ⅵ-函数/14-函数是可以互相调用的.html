@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // function fn1() {
+      //     console.log(11);
+      //     fn2();//在函数fn1里面调用fn2函数
+      // }
+      // fn1();
+      // function fn2() {
+      //     console.log(22);
+      // }
+
+      //   function fn1() {
+      //     console.log(111); //111
+      //     fn2(); //222,fn2
+      //     console.log("fn1"); //fn1
+      //   }
+
+      //   function fn2() {
+      //     console.log(222);
+      //     console.log("fn2");
+      //   }
+      //   fn1();
+      //111
+      //222
+      //fn2
+      //fn1
+
+      //用户输入年份，输出当前年份2月份的天数。 (如果是闰年,则2月份是29天,如果是平年,则2月份是28天)
+//方法一
+      // function day() {
+      //     var year = prompt('请您输入年份');
+      //     if ((year % 4 == 0 && year % 100 == 0) || year % 400 == 0) {
+      //         alert('您输入的年份是闰年，今年的二月份有' + 29 + '天');
+      //     }
+      //     alert('您输入的年份是平年，今年的二月份有' + 28 +'天');
+      // }
+      // day();
+//方法二
+      // function day() {
+      //   if (isRunYear(year)) {
+      //     //调用函数需要加括号
+      //     alert("您输入的年份是闰年，今年的二月份有" + 29 + "天");
+      //   }
+      //   alert("您输入的年份是平年，今年的二月份有" + 28 + "天");
+      // }
+      // day();
+
+      // function isRunYear(year) {
+      //     //如果是闰年我们返回true，否则，返回false   (闰年：能被4整除并且能被100整除，或能被400整除)
+      //     var flag = false; //flag里面存的是true或false值，先让他存一个false
+      //     if ((year % 4 == 0 && year % 100 == 0) || year % 400 == 0) {
+      //       flag = true;
+      //     }
+      //     return flag;
+      //   }
+      //   console.log(isRunYear(2000));
+    </script>
+  </head>
+</html>

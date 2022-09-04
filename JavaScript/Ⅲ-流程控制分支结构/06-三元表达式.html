@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //  1.   有三元运算符组成的式子我们称为三元表达式
+    //  2. （++num 是一元表达式 ）     result=       3>5?          :           是三元表达式
+                       //  3.语法结构
+                                  //  result=条件表达式 ?   表达式1:  表达式2
+   //  4.执行思路
+   // 如果条件表达式结果为真 则返回表达式1的值 如果条件表达式结果为假 则返回表达式2的值
+      //5.代码体验
+       var num = 2;
+       var result =num>5? '是的':'不是的';
+       console.log(result);
+       //下面是多分支语句
+      if (num>5) {
+         console.log(result='是的'); 
+      }
+      else{
+          console.log(result='不是的'); 
+      }
+
+
+      //案例：数字补零
+     // 用户输入0~59之间的一个数字,如果数字小于10 ,则在前面补0 ,比如01 , 09 , 如果数字大于10,则不需要补，比如20。
+     //先来看一下多分支语句解题
+      var num1= prompt('请输入一个数字');
+     if (num1<10) {
+         alert('0'+num1);
+         
+     }else{
+         alert(num1);
+     }
+
+     //下面来看看三元表达式解题思路:  表达式1（这里是比较或者算数运算）？ 表达式2：表达式3    表达式1和2一般是对的或错的，或者分别都相当于else if ，对的则输出：前面的 ，错的输出：后面的。
+     var time=prompt('请您输入一个0~59的数字');
+     var result = time<10? '0'+ time: time ;
+     alert(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
